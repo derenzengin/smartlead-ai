@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SmartLead AI</title>
+</head>
+<body>
+
+    <h1>SmartLead AI Dashboard</h1>
+
+    <h2>Add a Lead</h2>
+
+    <form method="POST" action="/dashboard">
+
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="company">Company</label><br>
+        <input type="text" id="company" name="company"><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="notes">Notes</label><br>
+        <textarea id="notes" name="notes"></textarea><br><br>
+
+        <button type="submit">Analyze Lead</button>
+
+    </form>
+
+    {% if analysis %}
+        <hr>
+
+        <h2>AI Analysis</h2>
+
+        <div>
+            <pre>{{ analysis }}</pre>
+        </div>
+    {% endif %}
+
+</body>
+</html>
