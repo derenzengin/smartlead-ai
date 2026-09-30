@@ -33,11 +33,14 @@ def sohbet():
         }), 400
 
     try:
+        # AI servisinden yanıtı alıyoruz
         cevap = ai_service.yanit_uret(mesaj, [])
 
+        # Wix'in ve frontend'in sorunsuz okuyabilmesi için hem "cevap" hem "yanit" döndürüyoruz
         return jsonify({
             "basari": True,
-            "cevap": cevap
+            "cevap": cevap,
+            "yanit": cevap 
         })
 
     except AIServiceError:
