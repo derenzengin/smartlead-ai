@@ -3,3 +3,4 @@ python-dotenv
 groq
 requests
 gunicorn
+flask-cors

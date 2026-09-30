@@ -1,5 +1,8 @@
+import os 
+ 
 from flask import Flask, jsonify
-
+from flask_cors import CORS
+ 
 from config import DevelopmentConfig
 from app.database import init_db
 from app.routes import pages, api
